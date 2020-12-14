@@ -1,0 +1,18 @@
+#Rc (Replication Controller) is mainly used for High Availability and Load Balancing
+apiVersion: v1
+kind: ReplicationController  #kind of object
+metadata:
+  name: nginx-rc    #name of the RC
+spec:
+  replicas: 3   #number of pods should be running
+  selector:     #nginx-app is label, selectors select the pod with labels
+    app: nginx-apps
+  template:          #pod configuration is done under template
+    metadata:
+      name: nginx-pod
+      labels:
+        app: nginx-apps
+    spec:
+      containers:
+      - name: nginx-containers
+        image: nginx     
