@@ -1,0 +1,62 @@
+sudo adduser harsha
+
+sudo openssl genrsa -out harsha.key 2048
+
+sudo openssl req -new -key harsha.key -out harsha.csr -subj "/CN=harsha/O=finance"
+
+sudo cp /etc/kubernetes/pki/ca.crt .
+
+sudo cp /etc/kubernetes/pki/ca.key .
+
+sudo openssl x509 -req -in harsha.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out harsha.crt -days 365
+
+kubectl config  view
+
+sudo kubectl --kubeconfig harsha.kubeconfig config set-cluster kubernetes --server https://172.31.26.192:6443 --certificate-authority=ca.crt
+
+sudo kubectl --kubeconfig harsha.kubeconfig config set-credentials harsha --client-certificate /home/harsha/harsha.crt --client-key /home/harsha/harsha.key 
+
+sudo kubectl --kubeconfig harsha.kubeconfig config set-context harsha-kubernetes --cluster kubernetes --namespace finance --user harsha
+
+sudo vi harsha.kubeconfig
+
+Change the current context : harsha-kubernetes
+
+sudo kubectl --kubeconfig harsha.kubeconfig get pods
+
+sudo kubectl create role finance-role --verb=get,list,create,delete --resource=pods,deploy --namespace=finance
+
+sudo kubectl get role finance-role -o yaml -n finance
+
+sudo kubectl create rolebinding finance-rolebinding --role=finance-role --user=harsha --namespace=finance
+
+sudo kubectl get rolebinding finance-rolebinding -o yaml -n finance
+
+sudo kubectl --kubeconfig harsha.kubeconfig get pods
+
+sudo kubectl --kubeconfig harsha.kubeconfig create deploy nginx --image nginx
+
+sudo kubectl --kubeconfig harsha.kubeconfig run nginx1 --image ngnix
+
+sudo kubectl --kubeconfig harsha.kubeconfig create deploy nginx --image nginx --namespace default
+
+Error from server (Forbidden): deployments.apps is forbidden: User "harsha" cannot create resource "deployments" in API group "apps" in the namespace "default"
+
+sudo kubectl --kubeconfig harsha.kubeconfig create deploy nginx --image nginx --namespace finance
+
+deployment.apps/nginx created
+
+kubectl edit roles finance-role -n finance
+
+
+
+
+
+
+
+
+
+
+
+
+
