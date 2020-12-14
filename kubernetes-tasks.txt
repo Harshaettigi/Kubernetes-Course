@@ -1,0 +1,49 @@
+Kubernetes Core Concepts tasks
+Create a pod (httpd), list the pods in the default namespace.
+Get the image name, pod name, and other details about the pod.
+Delete the pod.
+----------------------------------------------------------------------------
+Create a pod and name it "mywebapp" and use the Nginx1 image.
+Fix the pod with the correct image name.
+----------------------------------------------------------------------------
+Create a replicaset(4 pods) and list pods and replicaset separately.
+Delete one pod in replicaset.
+Scale up the replicaset to 5.
+Scale down the replicaset to 2.
+----------------------------------------------------------------------------
+Create a deployment with 3 pods with an Nginx image.
+----------------------------------------------------------------------------
+List all the namespaces
+List all the pods running in kube-system
+Create a new namespace and create pods in the newly created namespace
+----------------------------------------------------------------------------
+List all the services.
+Create a node port service.
+Kubernetes Scheduling tasks
+List the nodes available on the cluster, make sure there are minimum 2 worker nodes. 
+Create a pod in node1/node2 using a pod YAML file.
+----------------------------------------------------------------------------
+Create an Nginx YAML for creating a pod with labels Ex app=myapp
+List all the pods with the label filter.
+Create a replicaset YAML with 5 pods and multiple labels Ex app=myapp, type=frontend.
+----------------------------------------------------------------------------
+Create a taint on one of the worker nodes with a noschedule type.
+Create a pod without toleration, create a pod with toleration.
+----------------------------------------------------------------------------
+Label the node, create a pod with node selector feature to assign a pod to the node.
+Lable the node and create a pod with node affinity rules to deploy the pod using IN and NOTIN types.
+----------------------------------------------------------------------------
+Create a pod using resources and limits.
+----------------------------------------------------------------------------
+Create 3 nodes and deploy Nginx pod on all three nodes using daemon sets. 
+----------------------------------------------------------------------------
+Connect to worker node and create a pod without using master node/master components(static pod)
+----------------------------------------------------------------------------
+Enable the metric server on the cluster, use basic commands to get the details of nodes and pods.
+Kubernetes Application lifecycle management.
+Create a deployment with 3 replicas of nginx:1.7.1, update the image to Nginx:1.9.1 using rolling updates. 
+Undo the rolling updates using rollback.
+----------------------------------------------------------------------------
+Create a pod with env variables with the help of a config map. 
+----------------------------------------------------------------------------
+Create a secret YAML and encrypt the values and pass the same to the pod YAML file and create a pod.
