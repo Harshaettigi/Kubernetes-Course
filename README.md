@@ -1,36 +1,8 @@
 # Kubernetes-Course (Updating soon)
 
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Harshaettigi 
-Harshaettigi
-/
-Kubernetes-Course
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Kubernetes-Course/CKA-Syllabus
-@Harshaettigi
-Harshaettigi Create CKA-Syllabus
-…
-Latest commit 5afba47 2 days ago
- History
- 1 contributor
-78 lines (77 sloc)  1.64 KB
+
+
   
 1.Introduction
   Docker Overview
@@ -38,6 +10,11 @@ Latest commit 5afba47 2 days ago
   Containers 
   Docker and setup 
   Why Kubernetes
+  
+  
+  
+  
+  
 2.Kubernetes core concepts - 19%
   Cluster, Nodes, Pods
   Architecture components - ETCD, API server, control manager, Scheduler, kubelet, Kube proxy
@@ -48,6 +25,11 @@ Latest commit 5afba47 2 days ago
   Namespace
   Services
   Kubectl cheatsheets
+  
+  
+  
+  
+  
 3.Scheduling - 5%
   Labels and selectors
   Manual scheduling
@@ -57,9 +39,19 @@ Latest commit 5afba47 2 days ago
   Daemons sets
   Static pods
   Multiple Schedulers
+  
+  
+  
+  
+  
 4.Logging/Monitoring - 5%
   Cluster Components monitoring
   Application logs
+  
+  
+  
+  
+  
 5.Application lifecycle management - 8%
   Rolling updates and rollbacks
   Configure application
@@ -69,11 +61,21 @@ Latest commit 5afba47 2 days ago
   Multi container pod
   Init Containers
   Self-healing applications
+  
+  
+  
+  
+  
 6.Cluster Maintenence - 11%
   OS Upgrade
   Kubernetes upgrade
   Cluster upgrade
   Backup and restore
+  
+  
+  
+  
+  
 7.Security - 12%
   Authentication
   TLS Basics
@@ -86,10 +88,21 @@ Latest commit 5afba47 2 days ago
   Cluster Roles
   Image scanning and security
   Network security
+  
+  
+  
+  
+  
+  
 8.Storage  - 7%
   CSI
   Volumes and Persistent volume
   Persistent volume claim
+  
+  
+  
+  
+  
 9.Networking - 11%
   Network introduction
   Cluster networking and CNI
@@ -98,12 +111,22 @@ Latest commit 5afba47 2 days ago
   Service network
   DNS and CoreDNS
   Ingress
+  
+  
+  
+  
+  
 10. Troubleshooting - 10%
   Worker node failure 
   Network failure
   Control plane failure
   Application failure
-  Installation, configuration, and validation - 12%
+  
+  
+  
+  
+  
+11.Installation, configuration, and validation - 12%
   Install Kubernetes - Kubeadm
   Install Kubernetes - Minikube
   Install Kubernetes - The hard way
