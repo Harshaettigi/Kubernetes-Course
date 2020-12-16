@@ -116,7 +116,7 @@
   
   
   
-10. Troubleshooting - 10%
+10.Troubleshooting - 10%
   Worker node failure 
   Network failure
   Control plane failure
