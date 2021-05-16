@@ -7,8 +7,8 @@ metadata:
 spec:
   selector:
     app: nginx-apps
-  type: Nodeport   #type of the service
+  type: NodePort   #type of the service
   ports:
-  - nodeport: 31000   #we can specify manually or k8's will provide random port from 30000-32676
+  - nodePort: 31000   #we can specify manually or k8's will provide random port from 30000-32676
     port: 80
-    targetport: 80 #container port #generally port and targetport are same.  
+    targetPort: 80 #container port #generally port and targetport are same.  
