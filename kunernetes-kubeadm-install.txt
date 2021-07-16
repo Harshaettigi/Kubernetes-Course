@@ -13,8 +13,8 @@ sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 sudo apt-get install kubeadm kubelet kubectl
 sudo apt-mark hold kubeadm kubelet kubectl
 kubeadm version
-sudo hostnamectl set-hostname master-node
-sudo hostnamectl set-hostname worker01
+sudo hostnamectl set-hostname master-node # Master node only
+sudo hostnamectl set-hostname worker01    # Worker node only
 
 #Master Node Only
 
