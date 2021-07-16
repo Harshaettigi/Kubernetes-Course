@@ -30,6 +30,8 @@ kubectl get pods --all-namespaces
 #Join Command will be different for each setup
 #example - kubeadm join 172.31.47.90:6443 --token wp6z1e.qw4zuv111jkdmq98 \
     --discovery-token-ca-cert-hash sha256:5d21245ca3423ff58602de09cb9d6a13b27ed0c686483051bdbe896de66f0e62
+
+#Master Node
 kubectl get nodes
 
 
