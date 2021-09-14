@@ -2,7 +2,13 @@
 
 sudo apt-get update
 sudo apt-get install docker.io
-docker ––version
+vi /etc/docker/daemon.json
+######################################## Copy the content to daemon.json file #########################################
+{
+  "exec-opts": ["native.cgroupdriver=systemd"]
+}
+#######################################################################################################################
+sudo systemctl restart docker
 sudo systemctl enable docker
 sudo systemctl status docker
 --------------------------------------------------
