@@ -1,8 +1,8 @@
 #Docker-Setup - Master and Worker Node
 
 sudo apt-get update
-sudo apt-get install docker.io
-vi /etc/docker/daemon.json
+sudo apt-get install -y docker.io
+sudo vi /etc/docker/daemon.json
 ######################################## Copy the content to daemon.json file #########################################
 {
   "exec-opts": ["native.cgroupdriver=systemd"]
@@ -16,7 +16,7 @@ sudo systemctl status docker
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-sudo apt-get install kubeadm kubelet kubectl
+sudo apt-get install -y kubeadm kubelet kubectl
 sudo apt-mark hold kubeadm kubelet kubectl
 kubeadm version
 sudo hostnamectl set-hostname master-node # Master node only
