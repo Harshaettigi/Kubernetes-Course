@@ -3,7 +3,8 @@
 sudo hostnamectl set-hostname master-node # Master node only
 sudo hostnamectl set-hostname worker01    # Worker node only
 
-
+-----------------------------------------------------
+#Kubernetes install - Master and Worker Node
 sudo apt-get update
 sudo apt-get install -y docker.io
 sudo vi /etc/docker/daemon.json
@@ -23,8 +24,6 @@ sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 sudo apt-get install -y kubeadm kubelet kubectl
 sudo apt-mark hold kubeadm kubelet kubectl
 kubeadm version
-sudo hostnamectl set-hostname master-node # Master node only
-sudo hostnamectl set-hostname worker01    # Worker node only
 
 #Master Node Only
 
