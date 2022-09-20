@@ -1,5 +1,9 @@
 #Docker-Setup - Master and Worker Node
 
+sudo hostnamectl set-hostname master-node # Master node only
+sudo hostnamectl set-hostname worker01    # Worker node only
+
+
 sudo apt-get update
 sudo apt-get install -y docker.io
 sudo vi /etc/docker/daemon.json
@@ -39,6 +43,3 @@ kubectl get pods --all-namespaces
 
 #Master Node
 kubectl get nodes
-
-
-
