@@ -25,7 +25,8 @@ sudo apt-get install -y kubeadm kubelet kubectl
 sudo apt-mark hold kubeadm kubelet kubectl
 kubeadm version
 
-#Master Node Only
+--------------------------------------------------
+#Kubernetes install Master Node Only
 
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 #Once this command finishes, it will display a kubeadm join message at the end. Make a note of the whole entry. This will be used to join the worker nodes to the cluster.
@@ -40,5 +41,5 @@ kubectl get pods --all-namespaces
 #example - kubeadm join 172.31.47.90:6443 --token wp6z1e.qw4zuv111jkdmq98 \
     --discovery-token-ca-cert-hash sha256:5d21245ca3423ff58602de09cb9d6a13b27ed0c686483051bdbe896de66f0e62
 
-#Master Node
+#Kubernetes install Master Node only
 kubectl get nodes
